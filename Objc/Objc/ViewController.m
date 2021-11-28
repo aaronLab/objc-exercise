@@ -16,13 +16,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.label.textAlignment = NSTextAlignmentCenter;
+    self.label.font = [UIFont systemFontOfSize:20.0 weight:UIFontWeightBold];
+    
     // [self string];
     
     // [self ints];
     
     // [self doubles];
     
-    [self booleans];
+    // [self booleans];
+    
+    [self arrays];
+}
+
+- (void)arrays {
+    
+    NSArray *array = @[@"Apple", @"Banana", @"Orange"];
+    NSUInteger randomIndex = arc4random() % array.count;
+    self.label.text = array[randomIndex];
+    
+    NSMutableArray *array2 = [[NSMutableArray alloc] initWithObjects:@"Apple", @"Banana", @"Orange", nil];
+    [array2 addObject:@"Melon"];
+    [array2 insertObject:@"Mango" atIndex:0];
+    [array2 removeObjectAtIndex:2];
+    
+    NSString *count = [NSString stringWithFormat:@"%lu", array2.count];
+    [self.button setTitle:count forState:UIControlStateNormal];
+    NSLog(@"%@", array2);
 }
 
 - (void)booleans {
