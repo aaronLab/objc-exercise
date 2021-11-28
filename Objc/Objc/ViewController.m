@@ -27,7 +27,34 @@
     
     // [self booleans];
     
-    [self arrays];
+    // [self arrays];
+    
+    [self statement];
+}
+
+- (void)statement {
+    
+    BOOL state = false;
+    
+    if (state == true) {
+        self.label.text = @"Allow";
+    } else {
+        self.label.text = @"Deny";
+    }
+    
+    NSString *name1 = @"Aaron";
+    NSString *name2 = @"Syeda";
+    
+    if ([name1 isEqualToString:@"Aaron"] && [name2 isEqualToString:@"Syeda"] ) {
+        [self.button setTitle:@"Aaron And Syeda" forState:UIControlStateNormal];
+    }
+    
+    if ([name1 isEqualToString:@"Somebody"] || [name2 isEqualToString:@"Nobody"] ) {
+        [self.mySwitch setOn:false];
+    } else if (![name1 isEqualToString:@"Somebody"] || ![name2 isEqualToString:@"Nobody"] ) {
+        [self.mySwitch setOn:true];
+    }
+    
 }
 
 - (void)arrays {
