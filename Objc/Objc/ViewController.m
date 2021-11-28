@@ -16,16 +16,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // [self string];
+}
+
+- (void)string {
     /**
      Const & Var
      */
     NSString *word1 = @"word1";
     NSString * const word2 = @"word2"; // Can't change
+    NSLog(word2);
     
     word1 = @"new value";
     
     int int1 = 1;
     const int int2 = 2; // Can't change
+    NSLog(@"%d", int2);
     
     int1 += 1;
     
