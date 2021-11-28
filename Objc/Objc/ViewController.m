@@ -18,7 +18,20 @@
     
     // [self string];
     
-    [self ints];
+    // [self ints];
+    
+    [self doubles];
+}
+
+- (void)doubles {
+    double1 = 100.123;
+    double2 = 200.1234;
+    
+    double score = double1 + double2;
+    self.label.text = [NSString stringWithFormat:@"%.2f", score];
+    
+    int ceiledDouble = ceil(double1);
+    NSLog(@"%d", ceiledDouble);
 }
 
 - (void)ints {
