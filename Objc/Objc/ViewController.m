@@ -19,17 +19,44 @@
     self.label.textAlignment = NSTextAlignmentCenter;
     self.label.font = [UIFont systemFontOfSize:20.0 weight:UIFontWeightBold];
     
-    // [self string];
+    [self string];
     
-    // [self ints];
+    [self ints];
     
-    // [self doubles];
+    [self doubles];
     
-    // [self booleans];
+    [self booleans];
     
-    // [self arrays];
+    [self arrays];
     
     [self statement];
+    
+    [self loop];
+}
+
+- (void)loop {
+    
+    int number = 10;
+    
+    for (number = 10; number > 0; number -= 1) {
+        if (number < 5) {
+            continue;
+        }
+        NSLog(@"%i", number);
+    }
+    
+    NSLog(@"%s", "=====");
+    
+    number = 0;
+    while (number < 10) {
+        NSLog(@"%i", number);
+        number += 1;
+        
+        if (number > 5) {
+            break;
+        }
+    }
+    
 }
 
 - (void)statement {
