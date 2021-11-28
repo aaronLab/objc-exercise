@@ -20,7 +20,18 @@
     
     // [self ints];
     
-    [self doubles];
+    // [self doubles];
+    
+    [self booleans];
+}
+
+- (void)booleans {
+    
+    bool1 = YES;
+    bool2 = false;
+    
+    [self.mySwitch setOn:bool1];
+    [self.button setEnabled:bool2];
 }
 
 - (void)doubles {
