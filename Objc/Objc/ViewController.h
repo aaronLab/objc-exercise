@@ -11,6 +11,9 @@
     
     NSString *name;
     
+    int int1;
+    int int2;
+    
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *label;

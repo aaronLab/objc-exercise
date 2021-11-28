@@ -17,6 +17,19 @@
     [super viewDidLoad];
     
     // [self string];
+    
+    [self ints];
+}
+
+- (void)ints {
+    int1 = 10;
+    int2 = 100;
+    
+    int score = int1 + int2;
+    
+    self.label.text = [NSString stringWithFormat:@"%d", score];
+    
+    NSLog(@"%d, %d", int1, int2);
 }
 
 - (void)string {
